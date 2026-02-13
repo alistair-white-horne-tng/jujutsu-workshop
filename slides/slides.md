@@ -8,7 +8,7 @@ themeConfig:
       email: martin.vanijcken@tngtech.com
       picture: ./img/martin.jpg
     - name: Alistair White-Horne
-      email: alistair.white-horne@tngtech.com
+      email: alistair.whitehorne@tngtech.com
       picture: ./img/alistair.jpg
 hideInToc: true
 transition: slide-left
@@ -21,39 +21,46 @@ title: "Introduction to Jujutsu VCS"
 layout: speaker
 title: "Who are we?"
 hideInToc: true
-
 ---
 
 ---
-src: ./pages/installing_jujutsu.md 
+src: ./pages/introduction.md 
 ---
 
 ---
-src: ./pages/configuring_jujutsu.md 
+src: ./pages/revsets.md 
 ---
 
 ---
-src: ./pages/basic_operations.md
+src: ./pages/creating_and_navigating.md 
 ---
 
 ---
-src: ./pages/changing_history.md
+src: ./pages/manipulating.md
 ---
 
 ---
-src: ./pages/undo.md
+src: ./pages/disaster_recovery.md
 ---
 
 ---
-src: ./pages/workspaces.md
+src: ./pages/conflicts.md
 ---
 
 ---
-src: ./pages/templating.md
+src: ./pages/bookmarks_and_remotes.md
 ---
 
 ---
-src: ./pages/outlook.md
+src: ./pages/quality_of_life_features.md
+---
+
+---
+src: ./pages/more_useful_features.md
+---
+
+---
+src: ./pages/demoable_features.md
 ---
 
 ---
