@@ -4,22 +4,12 @@ layout: section
 
 # Introduction
 
-
 ---
-title: What is Jujutsu?
+title: Key questions
 level: 2
 ---
 
-Jujutsu VCS `jj` is...
-- Cool
-- Awesome
-- Fast
-- Epic
-- ....
-
----
-title: Why does `jj` exist?
-level: 2
----
-
-Blah blah 
+- **What is Jujutsu?** Jujutsu VCS (`jj`) is a distributed VCS designed for an “always-rewrite” workflow, with first-class Git interoperability
+- **Why does `jj` exist?** Make everyday history editing safe + ergonomic (undoable), while still integrating cleanly with existing Git tooling
+- **Who created `jj`?** Martin von Zweigbergk
+- **Who uses `jj`?** Teams and individuals who want Git-remote compatibility but prefer a rewrite-first local workflow
