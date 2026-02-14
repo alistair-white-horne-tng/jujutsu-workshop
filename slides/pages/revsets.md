@@ -13,7 +13,7 @@ level: 2
 
 - The revset language allows you to select a set of revisions 🤯
 - Often refers to a single commit, but can also select multiple revisions
-- Used by many commands to manipulate revisions
+- Used by many commands to manipulate revisions, using the `-r` flag
 
 </v-clicks>
 

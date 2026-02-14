@@ -5,15 +5,17 @@ layout: section
 # Manipulating revs
 
 ---
-title: Common commands
+title: Manipulating revs
 level: 2
 ---
 
 <v-clicks>
 
-- **`jj abandon`** abandons a revision (rewiring descendants onto its parents)
-- **`jj squash`** moves the changes from a revision into its parent revision
-- **`jj split`** splits a revision in two
-- **`jj rebase`** moves revisions to different parent(s)
+- `jj abandon` "deletes" a rev
+- `jj squash` combines a rev with its parent
+- `jj split` splits a rev into two
+- `jj rebase` moves revs to different parent(s)
+
+All can be used with `-r [rev]` to specify which rev to manipulate
 
 </v-clicks>

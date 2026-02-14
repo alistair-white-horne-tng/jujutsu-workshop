@@ -5,14 +5,17 @@ layout: section
 # More advanced disaster recovery
 
 ---
-title: Operation log essentials
+title: The operation log
 level: 2
 ---
 
 <v-clicks>
 
-- **`jj operation` / `jj op`**: Every repo change is an “operation”; operations form a log you can inspect and restore
+Every change to the repo is recorded in an “operation”.
+
 - **`jj op log`** shows the operation history (the “undo tree”)
-- **`jj op restore`** restores the repo to the state of a previous operation
+- **`jj op restore [operation]`** restores the whole repo to the state it was in at the given operation
+
+NB: `jj undo` is just a shortcut for `jj op restore @-`
 
 </v-clicks>
