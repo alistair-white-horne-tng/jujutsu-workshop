@@ -9,5 +9,9 @@ title: Workflow
 level: 2
 ---
 
+<v-clicks>
+
 - **`jj resolve`** resolves conflicted files in the working copy
 - **Editor/IDE workflow (extra):** you can also resolve in your IDE/editor, then continue with normal `jj` commands
+
+</v-clicks>
