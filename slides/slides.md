@@ -32,10 +32,6 @@ src: ./pages/revsets.md
 ---
 
 ---
-src: ./pages/bonus_revsets.md
----
-
----
 src: ./pages/creating_and_navigating.md 
 ---
 
