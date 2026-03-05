@@ -8,5 +8,5 @@
     ```
 4. Track the following bookmarks (we'll explain the purpose of this during the workshop...). It is intentional that `exercise-four` is missing:
     ```shell
-    jj bookmark track exercise-one exercise-two exercise-three exercise-five
+    jj bookmark track exercise-one exercise-two exercise-three exercise-five main
     ```
