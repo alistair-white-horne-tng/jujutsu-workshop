@@ -144,20 +144,20 @@
   text-align: center;
 }
 
-.title-main {
-  font-size: 2.8em;
+.reveal .title-main {
+  font-size: 2.9em;
   font-weight: bold;
   margin: var(--space-xs) 0;
   color: var(--color-text-primary);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.title-main--small {
-  font-size: 1.5em;
+.reveal .title-main--small {
+  font-size: 1.6em;
 }
 
-.title-sub {
-  font-size: var(--font-size-lg);
+.reveal .title-sub {
+  font-size: 1em;
   font-weight: 300;
   color: var(--color-text-secondary);
   margin: var(--space-xs) 0;
@@ -506,7 +506,7 @@
   margin-bottom: var(--space-lg);
 }
 
-.contact-name {
+.reveal .contact-name {
   color: var(--color-white);
   font-size: var(--font-size-base);
   margin-bottom: var(--space-md);
