@@ -83,22 +83,18 @@
 
 					<section data-auto-animate>
 						<h2>What is Jujutsu VCS?</h2>
-						<div>
-							<ul class="features-list">
-								<li class="fragment">A Git-compatible distributed VCS</li>
-								<li class="fragment">Created by Martin von Zweigbergk</li>
-								<li class="fragment">Created as a hobby project and "20% project""</li>
-								<li class="fragment">Now his full-time job, with "ongoing support from Google"</li>
-								<li class="fragment">Mostly used by individuals, but some widespread adoption inside Google</li>
-							</ul>
-						</div>
+						<ul class="features-list">
+							<li class="fragment">A Git-compatible distributed VCS</li>
+							<li class="fragment">Created by Martin von Zweigbergk</li>
+							<li class="fragment">Created as a hobby project and "20% project""</li>
+							<li class="fragment">Now his full-time job, with "ongoing support from Google"</li>
+							<li class="fragment">Mostly used by individuals, but some widespread adoption inside Google</li>
+						</ul>
 					</section>
 
 					<section data-auto-animate>
 						<h2>What is Jujutsu VCS?</h2>
-						<div>
-							<img src="images/jujutsu-intro-diagram.png" alt="Jujutsu introduction diagram" class="diagram diagram--small" />
-						</div>
+						<img src="images/jujutsu-intro-diagram.png" alt="Jujutsu introduction diagram" class="diagram diagram--extra-small" style="max-width: 70%;" />
 					</section>
 
 					<section>
@@ -128,7 +124,7 @@
 
 					<section data-background-color="#27ae60">
 						<h2>If in doubt</h2>
-						<div class="help-section">
+						<div class="u-text-center">
 							<div class="fragment">
 								<p>Use the CLI reference:</p>
 								<code class="big-code">
@@ -160,9 +156,7 @@
 								watch -c jj log --color=always
 							</code></pre>
 						</div>
-						<div class="fragment">
-							<img data-id="log-diagram" src="images/jj-log-and-revsets-diagram.png" alt="Revision graph visualization" class="diagram diagram--small" />
-						</div>
+						<img data-id="log-diagram" src="images/jj-log-and-revsets-diagram.png" alt="Revision graph visualization" class="diagram diagram--small fragment" />
 					</section>
 
 					<section data-auto-animate>
@@ -417,7 +411,7 @@
 						<h2>Exercise one</h2>
 						<p>Check out the branch for exercise-one</p>
 						<ol class="u-font-size-sm">
-							<li class="fragment">Add descriptions to the commits (target once with relative targetting (<code>@-</code>), and once with absolute targetting <code>jj desc rhw</code>)</li>
+							<li class="fragment">Add descriptions to the commits (target once with relative targeting (<code>@-</code>), and once with absolute targeting <code>jj desc rhw</code>)</li>
 							<li class="fragment">Add a new commit on top of the branch</li>
 							<li class="fragment">Make some changes if you like</li>
 							<li class="fragment">Use <code>jj edit</code> to modify one of your previous commits</li>
@@ -425,9 +419,7 @@
 							<li class="fragment">Try to make a change with <code>jj edit</code> that conflicts with a later change</li>
 							<li class="fragment">Use <code>jj undo</code> to undo that change</li>
 						</ol>
-						<div class="fragment u-margin-top-sm">
-							<img src="images/exercise-1-workflow.png" alt="Exercise 1 workflow example" class="diagram diagram--small" />
-						</div>
+						<img src="images/exercise-1-workflow.png" alt="Exercise 1 workflow example" class="diagram diagram--small fragment u-margin-top-sm" />
 					</section>
 				</section>
 
@@ -492,9 +484,7 @@
 								</ul>
 							</li>
 						</ol>
-						<div class="fragment u-margin-top-sm">
-							<img src="images/exercise-2-workflow.png" alt="Exercise 2 workflow example" class="diagram diagram--small" />
-						</div>
+						<img src="images/exercise-2-workflow.png" alt="Exercise 2 workflow example" class="diagram diagram--small fragment u-margin-top-sm" />
 					</section>
 				</section>
 
@@ -515,9 +505,7 @@
 								<p>displays the operation history</p>
 							</div>
 						</div>
-						<div class="fragment">
-							<img data-id="op-log" src="images/operation-log-example.png" alt="Operation log output" class="diagram diagram--large diagram--with-border" />
-						</div>
+						<img data-id="op-log" src="images/operation-log-example.png" alt="Operation log output" class="diagram diagram--large diagram--with-border fragment" />
 					</section>
 
 					<section data-auto-animate>
@@ -542,9 +530,7 @@
 								<p>reverts the operation <code>[op_id]</code></p>
 							</div>
 						</div>
-						<div class="u-margin-top-sm">
-							<img data-id="op-log" src="images/operation-log-example.png" alt="Operation restore example" class="diagram diagram--extra-small" />
-						</div>
+						<img data-id="op-log" src="images/operation-log-example.png" alt="Operation restore example" class="diagram diagram--extra-small u-margin-top-sm" style="max-width: 50%;" />
 					</section>
 				</section>
 
@@ -611,9 +597,7 @@
 							<li class="fragment">Otherwise, go to exercise-three branch which is pushed to contain a conflict</li>
 							<li class="fragment">Try resolving it with your IDE and see how this works with IDEs that support git</li>
 						</ol>
-						<div class="fragment u-margin-top-sm">
-							<img src="images/exercise-3-workflow.png" alt="Exercise 3 conflict resolution workflow" class="diagram diagram--small" />
-						</div>
+						<img src="images/exercise-3-workflow.png" alt="Exercise 3 conflict resolution workflow" class="diagram diagram--small fragment u-margin-top-sm" />
 					</section>
 				</section>
 
@@ -639,9 +623,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="fragment u-margin-top-sm">
-							<img src="images/bookmarks-diagram.png" alt="Bookmarks concept diagram" class="diagram diagram--large" />
-						</div>
+						<img src="images/bookmarks-diagram.png" alt="Bookmarks concept diagram" class="diagram diagram--large u-margin-top-sm fragment" />
 					</section>
 
 					<section>
@@ -678,21 +660,19 @@
 
 					<section>
 						<h2>Fetching and pushing</h2>
-						<div class="fetch-push-info">
-							<div class="command-reference fragment">
-								<code class="command-name">jj git fetch</code>
-								<div class="command-explanation">
-									<p>fetches all bookmarks from the remote</p>
-									<p class="command-hint">and essentially <code>git pull</code>s all tracked bookmarks</p>
-								</div>
+						<div class="command-reference fragment">
+							<code class="command-name">jj git fetch</code>
+							<div class="command-explanation">
+								<p>fetches all bookmarks from the remote</p>
+								<p class="command-hint">and essentially <code>git pull</code>s all tracked bookmarks</p>
 							</div>
-							<div class="command-reference fragment">
-								<code class="command-name">jj git push</code>
-								<div class="command-explanation">
-									<p>pushes bookmarks to the remote</p>
-									<p class="command-hint">Behaves similarly to <code>git push --force-with-lease</code></p>
-									<p class="command-hint">Pushes all bookmarks which are ancestors of <code>@</code> (see <a href="https://docs.jj-vcs.dev/latest/cli-reference/#jj-git-push">docs</a>)</p>
-								</div>
+						</div>
+						<div class="command-reference fragment">
+							<code class="command-name">jj git push</code>
+							<div class="command-explanation">
+								<p>pushes bookmarks to the remote</p>
+								<p class="command-hint">Behaves similarly to <code>git push --force-with-lease</code></p>
+								<p class="command-hint">Pushes all bookmarks which are ancestors of <code>@</code> (see <a href="https://docs.jj-vcs.dev/latest/cli-reference/#jj-git-push">docs</a>)</p>
 							</div>
 						</div>
 					</section>
@@ -786,7 +766,7 @@
 								<p>shows how a revision has changed over time</p>
 							</div>
 						</div>
-						<p class="fragment">Let yourself loose on the <a href="https://docs.jj-vcs.dev/latest/cli-reference/l">CLI reference</a></p>
+						<p class="fragment">Let yourself loose on the <a href="https://docs.jj-vcs.dev/latest/cli-reference/">CLI reference</a></p>
 					</section>
 
 					<section data-background-color="#e67e22">
@@ -802,9 +782,7 @@
 					<section data-visibility="hidden">
 						<h2>Exercise 5</h2>
 						<p>Use <code>jj absorb</code> in the branch for exercise 5 to absorb changes into parent commits</p>
-						<div class="fragment u-margin-top-sm">
-							<img src="images/exercise-5-workflow.png" alt="Exercise 5 absorb workflow" class="diagram diagram--small" />
-						</div>
+						<img src="images/exercise-5-workflow.png" alt="Exercise 5 absorb workflow" class="diagram diagram--small fragment u-margin-top-sm" />
 					</section>
 
 					<section data-background-color="#e67e22">

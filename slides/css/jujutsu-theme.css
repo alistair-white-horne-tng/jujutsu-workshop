@@ -462,18 +462,18 @@
 }
 
 .reveal .diagram--small {
-  max-width: 80%;
-}
-
-.reveal .diagram--extra-small {
   max-width: 60%;
 }
 
-.diagram--large {
+.reveal .diagram--extra-small {
+  max-width: 40%;
+}
+
+.reveal .diagram--large {
   max-width: 90%;
 }
 
-.diagram--extra-large {
+.reveal .diagram--extra-large {
   max-width: 95%;
 }
 
@@ -530,9 +530,7 @@
 /* Help and Reference Sections
    ========================================================================== */
 
-.help-section {
-  text-align: center;
-}
+
 
 .big-code {
   font-size: var(--font-size-lg);
@@ -711,9 +709,7 @@
   margin-left: var(--space-xl);
 }
 
-.fetch-push-info {
-  text-align: left;
-}
+
 
 /* Custom Animations
    ========================================================================== */
