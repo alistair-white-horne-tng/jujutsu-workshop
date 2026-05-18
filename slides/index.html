@@ -92,16 +92,6 @@
 								<li class="fragment">Mostly used by individuals, but some widespread adoption inside Google</li>
 							</ul>
 						</div>
-
-						<aside class="notes">
-							This is the core introduction to Jujutsu VCS. The quote really captures the essence - it feels like an interactive rebase but in a good way.
-
-							Key points to emphasize:
-							- Git-compatible means you can use existing Git remotes
-							- Martin von Zweigbergk is a well-known contributor to version control systems
-							- Originally a hobby project but now has Google backing
-							- Still relatively niche but growing adoption
-						</aside>
 					</section>
 
 					<section data-auto-animate>
@@ -165,9 +155,11 @@
 
 					<section data-background-color="#27ae60" data-auto-animate>
 						<h2>A handy command</h2>
-						<pre><code class="bash" data-trim>
-							watch -c jj log --color=always
-						</code></pre>
+						<div class="exercise-header">
+							<pre><code class="bash" data-trim>
+								watch -c jj log --color=always
+							</code></pre>
+						</div>
 						<div class="fragment">
 							<img data-id="log-diagram" src="images/jj-log-and-revsets-diagram.png" alt="Revision graph visualization" class="diagram diagram--small" />
 						</div>
@@ -324,39 +316,37 @@
 					<section>
 						<h2>Non-essential revsets</h2>
 						<p class="subtitle">Just so you know what's out there</p>
-						<div class="features-grid">
-							<div class="command-reference fragment">
-								<code class="command-name">x ~ y</code>
-								<div class="command-explanation">
-									<p>selects revs in <code>x</code> but not in <code>y</code></p>
-									<p class="command-hint">Also <code>x | y</code> and <code>x & y</code></p>
-								</div>
+						<div class="command-reference fragment">
+							<code class="command-name">x ~ y</code>
+							<div class="command-explanation">
+								<p>selects revs in <code>x</code> but not in <code>y</code></p>
+								<p class="command-hint">Also <code>x | y</code> and <code>x & y</code></p>
 							</div>
-							<div class="command-reference fragment">
-								<code class="command-name">all()</code>
-								<div class="command-explanation">
-									<p>selects all revisions</p>
-									<p class="command-hint">equivalent to <code>::</code></p>
-								</div>
+						</div>
+						<div class="command-reference fragment">
+							<code class="command-name">all()</code>
+							<div class="command-explanation">
+								<p>selects all revisions</p>
+								<p class="command-hint">equivalent to <code>::</code></p>
 							</div>
-							<div class="command-reference fragment">
-								<code class="command-name">heads(x)</code>
-								<div class="command-explanation">
-									<p>selects the "tips of the branches" in <code>x</code></p>
-									<p class="command-hint">equivalent to <code>x ~ ::x-</code></p>
-								</div>
+						</div>
+						<div class="command-reference fragment">
+							<code class="command-name">heads(x)</code>
+							<div class="command-explanation">
+								<p>selects the "tips of the branches" in <code>x</code></p>
+								<p class="command-hint">equivalent to <code>x ~ ::x-</code></p>
 							</div>
-							<div class="command-reference fragment">
-								<code class="command-name">mine()</code>
-								<div class="command-explanation">
-									<p>selects revisions authored by the current user</p>
-								</div>
+						</div>
+						<div class="command-reference fragment">
+							<code class="command-name">mine()</code>
+							<div class="command-explanation">
+								<p>selects revisions authored by the current user</p>
 							</div>
-							<div class="command-reference fragment">
-								<code class="command-name">fork_point(x)</code>
-								<div class="command-explanation">
-									<p>selects the first shared ancestor between the revisions in <code>x</code></p>
-								</div>
+						</div>
+						<div class="command-reference fragment">
+							<code class="command-name">fork_point(x)</code>
+							<div class="command-explanation">
+								<p>selects the first shared ancestor between the revisions in <code>x</code></p>
 							</div>
 						</div>
 					</section>
@@ -528,10 +518,6 @@
 						<div class="fragment">
 							<img data-id="op-log" src="images/operation-log-example.png" alt="Operation log output" class="diagram diagram--large diagram--with-border" />
 						</div>
-						
-						<aside class="notes">
-							The operation log shows every operation performed on the repository. Each operation has a unique ID that can be used for restoration or reversion.
-						</aside>
 					</section>
 
 					<section data-auto-animate>
@@ -557,12 +543,8 @@
 							</div>
 						</div>
 						<div class="u-margin-top-sm">
-							<img data-id="op-log" src="images/operation-log-example.png" alt="Operation restore example" class="diagram diagram--small" />
+							<img data-id="op-log" src="images/operation-log-example.png" alt="Operation restore example" class="diagram diagram--extra-small" />
 						</div>
-						
-						<aside class="notes">
-							The operation log is incredibly powerful - you can restore to any previous state or revert specific operations. This makes Jujutsu almost impossible to lose work with.
-						</aside>
 					</section>
 				</section>
 
@@ -748,31 +730,29 @@
 
 					<section>
 						<h2>Quality of life features</h2>
-						<div class="features-grid">
-							<div class="command-reference fragment">
-								<code class="command-name">jj absorb</code>
-								<div class="command-explanation">
-									<p>squashes changes into their relevant ancestor commits</p>
-								</div>
+						<div class="command-reference fragment">
+							<code class="command-name">jj absorb</code>
+							<div class="command-explanation">
+								<p>squashes changes into their relevant ancestor commits</p>
 							</div>
-							<div class="command-reference fragment">
-								<code class="command-name">jj git push --named</code>
-								<div class="command-explanation">
-									<p>creates a bookmark and pushes it</p>
-								</div>
+						</div>
+						<div class="command-reference fragment">
+							<code class="command-name">jj git push --named</code>
+							<div class="command-explanation">
+								<p>creates a bookmark and pushes it</p>
 							</div>
-							<div class="command-reference fragment">
-								<code class="command-name">jj commit</code>
-								<div class="command-explanation">
-									<p>is equivalent to <code>jj desc && jj new</code></p>
-								</div>
+						</div>
+						<div class="command-reference fragment">
+							<code class="command-name">jj commit</code>
+							<div class="command-explanation">
+								<p>is equivalent to <code>jj desc && jj new</code></p>
 							</div>
-							<div class="command-reference fragment">
-								<code class="command-name">jj next --edit</code>
-								<div class="command-explanation">
-									<p>is equivalent to <code>jj edit @+</code></p>
-									<p class="command-hint">Also <code>jj prev</code></p>
-								</div>
+						</div>
+						<div class="command-reference fragment">
+							<code class="command-name">jj next --edit</code>
+							<div class="command-explanation">
+								<p>is equivalent to <code>jj edit @+</code></p>
+								<p class="command-hint">Also <code>jj prev</code></p>
 							</div>
 						</div>
 					</section>
@@ -780,33 +760,30 @@
 					<section>
 						<h2>Even more useful features</h2>
 						<p class="subtitle">Which we sadly don't have time for today</p>
-						<div class="features-grid">
-
-							<div class="command-reference fragment">
-								<code class="command-name">jj duplicate</code>
-								<div class="command-explanation">
-									<p>creates a duplicate revision</p>
-								</div>
+						<div class="command-reference fragment">
+							<code class="command-name">jj duplicate</code>
+							<div class="command-explanation">
+								<p>creates a duplicate revision</p>
 							</div>
-							<div class="command-reference fragment">
-								<code class="command-name">jj workspace add</code>
-								<div class="command-explanation">
-									<p>creates a new workspace</p>
-									<p class="command-hint">Essentially another full working copy in its own directory</p>
-								</div>
+						</div>
+						<div class="command-reference fragment">
+							<code class="command-name">jj workspace add</code>
+							<div class="command-explanation">
+								<p>creates a new workspace</p>
+								<p class="command-hint">Essentially another full working copy in its own directory</p>
 							</div>
-							<div class="command-reference fragment">
-								<code class="command-name">jj config edit</code>
-								<div class="command-explanation">
-									<p>edits the Jujutsu config</p>
-									<p class="command-hint">Either <code>--user</code> or <code>--repo</code></p>
-								</div>
+						</div>
+						<div class="command-reference fragment">
+							<code class="command-name">jj config edit</code>
+							<div class="command-explanation">
+								<p>edits the Jujutsu config</p>
+								<p class="command-hint">Either <code>--user</code> or <code>--repo</code></p>
 							</div>
-							<div class="command-reference fragment">
-								<code class="command-name">jj evolog</code>
-								<div class="command-explanation">
-									<p>shows how a revision has changed over time</p>
-								</div>
+						</div>
+						<div class="command-reference fragment">
+							<code class="command-name">jj evolog</code>
+							<div class="command-explanation">
+								<p>shows how a revision has changed over time</p>
 							</div>
 						</div>
 						<p class="fragment">Let yourself loose on the <a href="https://docs.jj-vcs.dev/latest/cli-reference/l">CLI reference</a></p>
