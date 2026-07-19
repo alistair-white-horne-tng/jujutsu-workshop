@@ -14,5 +14,5 @@
 - [ ] Setup needs to be made ready for windows
 - [ ] Clarify exact cases where `jj` prevents issues
   - Eg you're in the middle of something and need to check out a new branch for an interruption
-- [ ] Be more explicit about the side-by-side terminal setup
-- [ ] Add info about other available tooling
+- [x] Be more explicit about the side-by-side terminal setup
+- [x] Add info about other available tooling

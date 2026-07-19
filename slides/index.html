@@ -149,16 +149,6 @@
 						</div>
 					</section>
 
-					<section data-background-color="#27ae60" data-auto-animate>
-						<h2>A handy command</h2>
-						<div class="exercise-header">
-							<pre><code class="bash" data-trim>
-								watch -c jj log --color=always
-							</code></pre>
-						</div>
-						<img data-id="log-diagram" src="images/jj-log-and-revsets-diagram.png" alt="Revision graph visualization" class="diagram diagram--small fragment" />
-					</section>
-
 					<section data-auto-animate>
 						<h2>Revisions</h2>
 						<p>Just like commits in Git</p>
@@ -391,6 +381,22 @@
 						</div>
 					</section>
 
+					<section data-background-color="#27ae60" data-auto-animate>
+						<h2>Recommended IDE setup</h2>
+						<p class="fragment">
+							We recommend using two terminals side-by-side, with one side running
+							<code class="bash" data-trim style="background-color: black">
+								watch -c jj log --color=always
+							</code>
+						</p>
+
+						<img src="images/side-by-side-terminal.png" alt="Revision graph visualization" class="diagram diagram--extra-large fragment" />
+
+						<p class="fragment">Your favourite Git-compatible IDE will behave as though the Git head is at <code>@-</code></p>
+
+						<p class="fragment">NB: There do exist some GUI-based tools, eg <code>gg</code></p>
+					</section>
+
 					<section>
 						<h2>Snapshotting</h2>
 						<p><code>jj</code> snapshots the working copy when you run any <code>jj</code> command</p>
@@ -405,6 +411,13 @@
 								jj new exercise-one
 							</code></pre>
 						</div>
+
+						<p style="font-size: x-large">
+							Reminder:
+							<code class="bash" data-trim>
+								watch -c jj log --color=always
+							</code>
+						</p>
 					</section>
 
 					<section data-visibility="hidden">
