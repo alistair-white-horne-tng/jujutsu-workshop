@@ -4,6 +4,7 @@
 - [ ] Make sure that enumeration is correct
   - [ ] In slides
   - [ ] In exercises
+  - [ ] In setup instructions
 - [ ] Make exercises more clear
   - [ ] Use a `.md` file instead of depending on the commit messages
   - [ ] Make them feel more like real-world scenarios
