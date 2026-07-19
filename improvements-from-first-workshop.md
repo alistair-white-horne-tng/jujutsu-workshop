@@ -1,6 +1,6 @@
 # Points of improvement from feedback after the first workshop
 
-- [ ] Move remotes earlier so people can see how to use this in their own projects
+- [x] Move remotes earlier so people can see how to use this in their own projects
 - [ ] Make sure that enumeration is correct
   - [ ] In slides
   - [ ] In exercises

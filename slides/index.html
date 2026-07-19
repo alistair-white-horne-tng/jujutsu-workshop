@@ -428,6 +428,97 @@
 					<section data-background-color="#0663A5">
 						<div class="section-title">
 							<div class="section-number">5</div>
+							<h1>Remotes</h1>
+						</div>
+					</section>
+
+					<section>
+						<h2>Bookmarks</h2>
+						<div class="bookmarks-info">
+							<p class="fragment">Similar to branches in Git</p>
+							<p class="fragment">But they're just a label which points to a revision</p>
+
+							<div class="command-reference fragment u-margin-top-lg">
+								<code class="command-name">jj bookmark set</code>
+								<div class="command-explanation">
+									<p>creates or moves a bookmark</p>
+								</div>
+							</div>
+						</div>
+						<img src="images/bookmarks-diagram.png" alt="Bookmarks concept diagram" class="diagram diagram--large u-margin-top-sm fragment" />
+					</section>
+
+					<section>
+						<h2>Tracking bookmarks</h2>
+						<div class="tracking-info">
+							<div class="command-reference fragment">
+								<code class="command-name">jj bookmark track [name]</code>
+								<div class="command-explanation">
+									<p>starts tracking a bookmark</p>
+								</div>
+							</div>
+							<div class="fragment">
+								<strong>If that bookmark was pulled from the remote:</strong>
+								<ul>
+									<li><code>[name]@origin</code> becomes <code>[name]</code></li>
+									<li>you take ownership of it; its revs become mutable</li>
+								</ul>
+							</div>
+							<div class="fragment">
+								<strong>If that bookmark is local:</strong>
+								<ul>
+									<li>enables this bookmark to be pushed to a remote</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<h2>Fetching and pushing</h2>
+						<div class="command-reference fragment">
+							<code class="command-name">jj git fetch</code>
+							<div class="command-explanation">
+								<p>fetches all bookmarks from the remote</p>
+								<p class="command-hint">and essentially <code>git pull</code>s all tracked bookmarks</p>
+							</div>
+						</div>
+						<div class="command-reference fragment">
+							<code class="command-name">jj git push</code>
+							<div class="command-explanation">
+								<p>pushes bookmarks to the remote</p>
+								<p class="command-hint">Behaves similarly to <code>git push --force-with-lease</code></p>
+								<p class="command-hint">Pushes all bookmarks which are ancestors of <code>@</code> (see <a href="https://docs.jj-vcs.dev/latest/cli-reference/#jj-git-push">docs</a>)</p>
+							</div>
+						</div>
+					</section>
+
+					<section data-background-color="#e67e22">
+						<h2>Exercise 4</h2>
+						<div class="exercise-header">
+							<img src="images/exercise-book-icon.svg" alt="Exercise" class="icon icon--exercise" />
+							<pre><code class="bash" data-trim>
+								jj new main
+							</code></pre>
+						</div>
+					</section>
+
+					<section data-visibility="hidden">
+						<h2>Exercise 4</h2>
+						<ol class="u-font-size-sm">
+							<li class="fragment">Create a new bookmark with the name of your group pointing to the head of one of the branches you have been working on</li>
+							<li class="fragment">Use <code>jj bookmark track</code> on this bookmark to allow pushing to the remote</li>
+							<li class="fragment">Push with <code>jj git push</code></li>
+							<li class="fragment">Someone else can use <code>jj git fetch</code> to fetch all remote bookmarks</li>
+							<li class="fragment">Use <code>jj log -r ::&lt;bookmark-name&gt;@origin</code> to see the commits that are in that remote branch</li>
+						</ol>
+					</section>
+				</section>
+
+				<!-- Section 6 -->
+				<section>
+					<section data-background-color="#0663A5">
+						<div class="section-title">
+							<div class="section-number">6</div>
 							<h1>Manipulating<br>revisions</h1>
 						</div>
 					</section>
@@ -488,11 +579,11 @@
 					</section>
 				</section>
 
-				<!-- Section 6 -->
+				<!-- Section 7 -->
 				<section>
 					<section data-background-color="#0663A5">
 						<div class="section-title">
-							<div class="section-number">6</div>
+							<div class="section-number">7</div>
 							<h1>Disaster<br>recovery</h1>
 						</div>
 					</section>
@@ -534,11 +625,11 @@
 					</section>
 				</section>
 
-				<!-- Section 7 -->
+				<!-- Section 8 -->
 				<section>
 					<section data-background-color="#0663A5">
 						<div class="section-title">
-							<div class="section-number">7</div>
+							<div class="section-number">8</div>
 							<h1>Conflicts</h1>
 						</div>
 					</section>
@@ -598,104 +689,6 @@
 							<li class="fragment">Try resolving it with your IDE and see how this works with IDEs that support git</li>
 						</ol>
 						<img src="images/exercise-3-workflow.png" alt="Exercise 3 conflict resolution workflow" class="diagram diagram--small fragment u-margin-top-sm" />
-					</section>
-				</section>
-
-				<!-- Section 8 -->
-				<section>
-					<section data-background-color="#0663A5">
-						<div class="section-title">
-							<div class="section-number">8</div>
-							<h1>Remotes</h1>
-						</div>
-					</section>
-
-					<section>
-						<h2>Bookmarks</h2>
-						<div class="bookmarks-info">
-							<p class="fragment">Similar to branches in Git</p>
-							<p class="fragment">But they're just a label which points to a revision</p>
-
-							<div class="command-reference fragment u-margin-top-lg">
-								<code class="command-name">jj bookmark set</code>
-								<div class="command-explanation">
-									<p>creates or moves a bookmark</p>
-								</div>
-							</div>
-						</div>
-						<img src="images/bookmarks-diagram.png" alt="Bookmarks concept diagram" class="diagram diagram--large u-margin-top-sm fragment" />
-					</section>
-
-					<section>
-						<h2>Tracking bookmarks</h2>
-						<div class="tracking-info">
-							<div class="command-reference fragment">
-								<code class="command-name">jj bookmark track [name]</code>
-								<div class="command-explanation">
-									<p>starts tracking a bookmark</p>
-								</div>
-							</div>
-							<div class="fragment">
-								<strong>If that bookmark was pulled from the remote,</strong>
-								<ul>
-									<li><code>[name]@origin</code> becomes <code>[name]</code></li>
-									<li>you take ownership of it</li>
-								</ul>
-							</div>
-							<div class="fragment">
-								<strong>If that bookmark is local,</strong>
-								<ul>
-									<li>enables this bookmark to be pushed to a remote</li>
-								</ul>
-							</div>
-							<div class="fragment">
-								<h3>Tracked bookmarks</h3>
-								<ul>
-									<li>can be pushed to remotes</li>
-									<li>are updated locally if the remote changes</li>
-								</ul>
-							</div>
-						</div>
-					</section>
-
-					<section>
-						<h2>Fetching and pushing</h2>
-						<div class="command-reference fragment">
-							<code class="command-name">jj git fetch</code>
-							<div class="command-explanation">
-								<p>fetches all bookmarks from the remote</p>
-								<p class="command-hint">and essentially <code>git pull</code>s all tracked bookmarks</p>
-							</div>
-						</div>
-						<div class="command-reference fragment">
-							<code class="command-name">jj git push</code>
-							<div class="command-explanation">
-								<p>pushes bookmarks to the remote</p>
-								<p class="command-hint">Behaves similarly to <code>git push --force-with-lease</code></p>
-								<p class="command-hint">Pushes all bookmarks which are ancestors of <code>@</code> (see <a href="https://docs.jj-vcs.dev/latest/cli-reference/#jj-git-push">docs</a>)</p>
-							</div>
-						</div>
-					</section>
-
-					<section data-background-color="#e67e22">
-						<h2>Exercise 4</h2>
-						<div class="exercise-header">
-							<img src="images/exercise-book-icon.svg" alt="Exercise" class="icon icon--exercise" />
-							<pre><code class="bash" data-trim>
-								jj new main
-							</code></pre>
-						</div>
-					</section>
-
-					<section data-visibility="hidden">
-						<h2>Exercise 4</h2>
-						<ol class="u-font-size-sm">
-							<li class="fragment">Create a new bookmark with the name of your group pointing to the head of one of the branches you have been working on</li>
-							<li class="fragment">Use <code>jj bookmark track</code> on this bookmark to allow pushing to the remote</li>
-							<li class="fragment">Push with <code>jj git push</code></li>
-							<li class="fragment">Someone else can use <code>jj git fetch</code> to fetch all remote bookmarks</li>
-							<li class="fragment">Use <code>jj log -r ::&lt;bookmark-name&gt;@origin</code> to see the commits that are in that remote branch</li>
-						</ol>
 					</section>
 				</section>
 
