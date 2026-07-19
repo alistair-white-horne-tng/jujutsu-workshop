@@ -24,7 +24,7 @@
 				<section data-background-image="images/title-slide-background.png" data-background-size="cover">
 					<div class="title-overlay">
 						<div class="title-header">
-							<img src="images/jj-logo.svg" alt="Jujutsu VCS Logo" class="jj-title-logo" />
+							<img src="images/jj-logo.svg" alt="Jujutsu VCS Logo" class="logo logo--jj-title" />
 							<div class="title-text">
 								<h1 class="title-main">Jujutsu VCS</h1>
 								<h2 class="title-sub">The newer, better and shinier Git</h2>
@@ -36,7 +36,7 @@
 							</div>
 						</div>
 						<div class="title-footer">
-							<img src="images/tng-logo.svg" alt="TNG Technology Consulting" class="tng-title-logo" />
+							<img src="images/tng-logo.svg" alt="TNG Technology Consulting" class="logo logo--tng-title" />
 						</div>
 					</div>
 				</section>
@@ -47,7 +47,7 @@
 					<div class="plan-layout">
 						<div class="plan-item">
 							<h3>4 exercises (+1)</h3>
-							<p style="font-size: 0.8em;">interspersed between</p>
+							<p class="u-font-size-sm">interspersed between</p>
 							<h3>9 sections</h3>
 						</div>
 					</div>
@@ -56,7 +56,7 @@
 				<!-- Section 1 -->
 				<section>
 					<section data-background-color="#0663A5">
-						<div class="section-title-container">
+						<div class="section-title">
 							<div class="section-number">1</div>
 							<h1>What is<br>Jujutsu?</h1>
 						</div>
@@ -64,51 +64,37 @@
 
 					<section data-background-image="images/jiujitsu-sport.png" data-background-size="cover">
 						<div class="r-fit-text fragment">
-							<img src="images/red-x.svg" alt="Checkmark" style="height: 600px; border: none; background: none; box-shadow: none; opacity: 0.8;" />
+							<img src="images/red-x.svg" alt="Checkmark" class="icon icon--checkmark" />
 						</div>
 					</section>
 
 					<section data-auto-animate data-background-image="images/jj-log-showcase.png" data-background-size="contain" data-background-color="#1E1F22FF">
 						<div class="r-fit-text fragment">
-							<img src="images/green-checkmark.svg" alt="Checkmark" style="height: 600px; border: none; background: none; box-shadow: none; opacity: 0.8;" />
+							<img src="images/green-checkmark.svg" alt="Checkmark" class="icon icon--checkmark" />
 						</div>
 					</section>
 
 					<section data-auto-animate>
 						<h2>What is Jujutsu VCS?</h2>
-						<blockquote class="jj-quote fragment" style="margin-top: 2em;">
+						<blockquote class="quote quote--with-margin fragment">
 							"Just imagine: what if you were always in the middle of an interactive rebase, but this was actually a good thing?"
 						</blockquote>
 					</section>
 
 					<section data-auto-animate>
 						<h2>What is Jujutsu VCS?</h2>
-						<div>
-							<ul class="jj-features">
-								<li class="fragment">A Git-compatible distributed VCS</li>
-								<li class="fragment">Created by Martin von Zweigbergk</li>
-								<li class="fragment">Created as a hobby project and "20% project""</li>
-								<li class="fragment">Now his full-time job, with "ongoing support from Google"</li>
-								<li class="fragment">Mostly used by individuals, but some widespread adoption inside Google</li>
-							</ul>
-						</div>
-
-						<aside class="notes">
-							This is the core introduction to Jujutsu VCS. The quote really captures the essence - it feels like an interactive rebase but in a good way.
-
-							Key points to emphasize:
-							- Git-compatible means you can use existing Git remotes
-							- Martin von Zweigbergk is a well-known contributor to version control systems
-							- Originally a hobby project but now has Google backing
-							- Still relatively niche but growing adoption
-						</aside>
+						<ul class="features-list">
+							<li class="fragment">A Git-compatible distributed VCS</li>
+							<li class="fragment">Created by Martin von Zweigbergk</li>
+							<li class="fragment">Created as a hobby project and "20% project""</li>
+							<li class="fragment">Now his full-time job, with "ongoing support from Google"</li>
+							<li class="fragment">Mostly used by individuals, but some widespread adoption inside Google</li>
+						</ul>
 					</section>
 
 					<section data-auto-animate>
 						<h2>What is Jujutsu VCS?</h2>
-						<div>
-							<img src="images/jujutsu-intro-diagram.png" alt="Jujutsu introduction diagram" style="max-width: 65%; border-radius: 10px;" />
-						</div>
+						<img src="images/jj-stars-graph.png" alt="Jujutsu introduction diagram" class="diagram diagram--extra-small" style="max-width: 70%;" />
 					</section>
 
 					<section>
@@ -138,11 +124,11 @@
 
 					<section data-background-color="#27ae60">
 						<h2>If in doubt</h2>
-						<div class="help-section">
+						<div class="u-text-center">
 							<div class="fragment">
 								<p>Use the CLI reference:</p>
 								<code class="big-code">
-									<a href="https://docs.jj-vcs.dev/latest/cli-reference/" style="color: white">
+									<a href="https://docs.jj-vcs.dev/latest/cli-reference/">
 										https://docs.jj-vcs.dev/latest/cli-reference/
 									</a>
 								</code>
@@ -157,7 +143,7 @@
 				<!-- Section 2 -->
 				<section>
 					<section data-background-color="#0663A5">
-						<div class="section-title-container">
+						<div class="section-title">
 							<div class="section-number">2</div>
 							<h1>The log</h1>
 						</div>
@@ -165,29 +151,29 @@
 
 					<section data-background-color="#27ae60" data-auto-animate>
 						<h2>A handy command</h2>
-						<pre><code class="bash" data-trim>
-							watch -c jj log --color=always
-						</code></pre>
-						<div class="fragment">
-							<img data-id="log-diagram" src="images/jj-log-and-revsets-diagram.png" alt="Revision graph visualization" style="max-width: 60%; margin-top: 1em; border: 0; border-radius: 8px;" />
+						<div class="exercise-header">
+							<pre><code class="bash" data-trim>
+								watch -c jj log --color=always
+							</code></pre>
 						</div>
+						<img data-id="log-diagram" src="images/jj-log-and-revsets-diagram.png" alt="Revision graph visualization" class="diagram diagram--small fragment" />
 					</section>
 
 					<section data-auto-animate>
 						<h2>Revisions</h2>
 						<p>Just like commits in Git</p>
-						<img data-id="log-diagram" src="images/jj-log-and-revsets-diagram.png" alt="Revision graph visualization" style="max-width: 80%; margin-top: 1em; border-radius: 8px;" />
+						<img data-id="log-diagram" src="images/jj-log-and-revsets-diagram.png" alt="Revision graph visualization" class="diagram" />
 					</section>
 
 					<section data-auto-animate>
 						<h2>The working copy</h2>
-						<div class="revset-syntax fragment">
+						<div class="syntax-display fragment">
 							<code data-id="revset-symbol" class="syntax-code">@</code>
-							<div data-id="revset-explanation" class="explanation">
+							<div data-id="revset-explanation" class="syntax-explanation">
 								<p>is the current working-copy revision</p>
 							</div>
 						</div>
-						<img data-id="log-diagram" src="images/jj-log-and-revsets-diagram.png" alt="Working copy in revision graph" style="max-width: 80%; margin-top: 8px; border-radius: 8px;" />
+						<img data-id="log-diagram" src="images/jj-log-and-revsets-diagram.png" alt="Working copy in revision graph" class="diagram u-margin-top-sm" />
 					</section>
 
 					<section data-auto-animate>
@@ -195,30 +181,30 @@
 						<div class="revision-names">
 							<div class="fragment">
 								<h3>Jujutsu rev hash</h3>
-								<p>Eg <code style="color: #b78cf0">xu</code></p>
+								<p>Eg <code class="hash-code--jj">xu</code></p>
 							</div>
 							<div class="fragment">
 								<h3>Git commit hash</h3>
-								<p>Eg <code style="color: #538def">3f</code></p>
+								<p>Eg <code class="hash-code--git">3f</code></p>
 							</div>
 						</div>
-						<img data-id="log-diagram" src="images/jj-log-and-revsets-diagram.png" alt="Revision graph showing hash examples" style="max-width: 80%; margin-top: .7em; border-radius: 8px;" />
+						<img data-id="log-diagram" src="images/jj-log-and-revsets-diagram.png" alt="Revision graph showing hash examples" class="diagram" />
 					</section>
 
 					<section data-auto-animate>
 						<h2>Immutable revisions</h2>
 						<div class="immutable-info">
 							<p class="fragment">Jujutsu is very <em>rebasey</em>; it often rewrites revisions</p>
-							<p class="fragment">Some revisions are considered <strong style="color: #40f3df">immutable</strong> to protect them from accidental rewrites</p>
+							<p class="fragment">Some revisions are considered <strong>immutable</strong> to protect them from accidental rewrites</p>
 						</div>
-						<img data-id="log-diagram" src="images/immutable-revisions-diagram.png" alt="Immutable revisions concept" style="max-width: 80%; margin-top: 1em; border-radius: 8px;" />
+						<img data-id="log-diagram" src="images/immutable-revisions-diagram.png" alt="Immutable revisions concept" class="diagram u-margin-top-lg" />
 					</section>
 				</section>
 
 				<!-- Section 3 -->
 				<section>
 					<section data-background-color="#0663A5">
-						<div class="section-title-container">
+						<div class="section-title">
 							<div class="section-number">3</div>
 							<h1>Revsets</h1>
 						</div>
@@ -226,36 +212,36 @@
 
 					<section data-auto-animate>
 						<h2>What is a <em>revset</em>?</h2>
-						<div class="revset-intro">
+						<div class="u-text-center">
 							<p class="fragment">The <strong>revset</strong> language allows you to reference a set of revisions</p>
 							<p class="fragment">Often refers to a single revision, but can also select multiple revisions</p>
 							<p class="fragment">Used by many commands to manipulate revisions, using the <code>-r</code> flag</p>
 						</div>
-						<img data-id="revset-diagram" src="images/revset-syntax-diagram.png" alt="Revset syntax examples" style="max-width: 60%; border-radius: 8px; margin-top: 8px;" />
+						<img data-id="revset-diagram" src="images/revset-syntax-diagram.png" alt="Revset syntax examples" class="diagram diagram--small u-margin-top-sm" />
 					</section>
 
 					<!-- Revset Syntax Slides -->
 					<section data-auto-animate>
 						<h2 data-id="revset-header">Core revset syntax</h2>
-						<div class="revset-syntax">
+						<div class="syntax-display">
 							<code data-id="revset-symbol" class="syntax-code fragment">@</code>
-							<div data-id="revset-explanation" class="explanation fragment">
+							<div data-id="revset-explanation" class="syntax-explanation fragment">
 								<p>is the current working-copy revision</p>
 							</div>
 						</div>
-						<img data-id="revset-diagram" src="images/jj-log-and-revsets-diagram.png" alt="Working copy @ symbol in context" style="max-width: 80%; border-radius: 8px; margin-top: 8px;" />
+						<img data-id="revset-diagram" src="images/jj-log-and-revsets-diagram.png" alt="Working copy @ symbol in context" class="diagram u-margin-top-sm" />
 					</section>
 
 					<section data-auto-animate>
 						<h2 data-id="revset-header">Core revset syntax</h2>
-						<div class="revset-syntax">
+						<div class="syntax-display">
 							<code data-id="revset-symbol" class="syntax-code fragment">x-</code>
-							<div data-id="revset-explanation" class="explanation fragment">
+							<div data-id="revset-explanation" class="syntax-explanation fragment">
 								<p>selects parent(s) of <code>x</code></p>
-								<p data-id="revset-hint" class="hint">repeatable: <code>@--</code>, <code>@---</code>, etc</p>
+								<p data-id="revset-hint" class="syntax-hint">repeatable: <code>@--</code>, <code>@---</code>, etc</p>
 							</div>
 						</div>
-						<img data-id="revset-diagram" src="images/jj-log-and-revsets-diagram.png" alt="Parent selection visualization" style="max-width: 80%; border-radius: 8px; margin-top: 8px;" />
+						<img data-id="revset-diagram" src="images/jj-log-and-revsets-diagram.png" alt="Parent selection visualization" class="diagram u-margin-top-sm" />
 						<div class="fragment example-section">
 							<p>Example: <code>@-</code></p>
 						</div>
@@ -263,14 +249,14 @@
 
 					<section data-auto-animate>
 						<h2 data-id="revset-header">Core revset syntax</h2>
-						<div class="revset-syntax">
+						<div class="syntax-display">
 							<code data-id="revset-symbol" class="syntax-code fragment">x+</code>
-							<div data-id="revset-explanation" class="explanation fragment">
+							<div data-id="revset-explanation" class="syntax-explanation fragment">
 								<p>selects child(ren) of <code>x</code></p>
-								<p data-id="revset-hint" class="hint">repeatable: <code>@++</code>, <code>@+++</code>, etc</p>
+								<p data-id="revset-hint" class="syntax-hint">repeatable: <code>@++</code>, <code>@+++</code>, etc</p>
 							</div>
 						</div>
-						<img data-id="revset-diagram" src="images/jj-log-and-revsets-diagram.png" alt="Child selection visualization" style="max-width: 80%; border-radius: 8px; margin-top: 8px;" />
+						<img data-id="revset-diagram" src="images/jj-log-and-revsets-diagram.png" alt="Child selection visualization" class="diagram u-margin-top-sm" />
 						<div class="fragment example-section">
 							<p>Example: <code>@+</code></p>
 						</div>
@@ -278,14 +264,14 @@
 
 					<section data-auto-animate>
 						<h2 data-id="revset-header">Core revset syntax</h2>
-						<div class="revset-syntax">
+						<div class="syntax-display">
 							<code data-id="revset-symbol" class="syntax-code fragment">x::</code>
-							<div data-id="revset-explanation" class="explanation fragment">
+							<div data-id="revset-explanation" class="syntax-explanation fragment">
 								<p>selects all descendants of <code>x</code></p>
-								<p data-id="revset-hint" class="hint">(inclusive)</p>
+								<p data-id="revset-hint" class="syntax-hint">(inclusive)</p>
 							</div>
 						</div>
-						<img data-id="revset-diagram" src="images/jj-log-and-revsets-diagram.png" alt="Descendants selection visualization" style="max-width: 80%; border-radius: 8px; margin-top: 8px;" />
+						<img data-id="revset-diagram" src="images/jj-log-and-revsets-diagram.png" alt="Descendants selection visualization" class="diagram u-margin-top-sm" />
 						<div class="fragment example-section">
 							<p>Example: <code>@::</code></p>
 						</div>
@@ -293,14 +279,14 @@
 
 					<section data-auto-animate>
 						<h2 data-id="revset-header">Core revset syntax</h2>
-						<div class="revset-syntax">
+						<div class="syntax-display">
 							<code data-id="revset-symbol" class="syntax-code fragment">::x</code>
-							<div data-id="revset-explanation" class="explanation fragment">
+							<div data-id="revset-explanation" class="syntax-explanation fragment">
 								<p>selects all ancestors of <code>x</code></p>
-								<p data-id="revset-hint" class="hint">(inclusive)</p>
+								<p data-id="revset-hint" class="syntax-hint">(inclusive)</p>
 							</div>
 						</div>
-						<img data-id="revset-diagram" src="images/jj-log-and-revsets-diagram.png" alt="Ancestors selection visualization" style="max-width: 80%; border-radius: 8px; margin-top: 8px;" />
+						<img data-id="revset-diagram" src="images/jj-log-and-revsets-diagram.png" alt="Ancestors selection visualization" class="diagram u-margin-top-sm" />
 						<div class="fragment example-section">
 							<p>Example: <code>::r</code></p>
 						</div>
@@ -308,14 +294,14 @@
 
 					<section data-auto-animate>
 						<h2 data-id="revset-header">Core revset syntax</h2>
-						<div class="revset-syntax">
+						<div class="syntax-display">
 							<code data-id="revset-symbol" class="syntax-code fragment">x::y</code>
-							<div data-id="revset-explanation" class="explanation fragment">
+							<div data-id="revset-explanation" class="syntax-explanation fragment">
 								<p>selects revs which are descendants of <code>x</code> and ancestors of <code>y</code></p>
-								<p data-id="revset-hint" class="hint">(inclusive)</p>
+								<p data-id="revset-hint" class="syntax-hint">(inclusive)</p>
 							</div>
 						</div>
-						<img data-id="revset-diagram" src="images/jj-log-and-revsets-diagram.png" alt="Range selection visualization" style="max-width: 80%; border-radius: 8px; margin-top: 8px;" />
+						<img data-id="revset-diagram" src="images/jj-log-and-revsets-diagram.png" alt="Range selection visualization" class="diagram u-margin-top-sm" />
 						<div class="fragment example-section">
 							<p>Example: <code>ls::r</code></p>
 						</div>
@@ -324,39 +310,37 @@
 					<section>
 						<h2>Non-essential revsets</h2>
 						<p class="subtitle">Just so you know what's out there</p>
-						<div class="more-features">
-							<div class="command-desc fragment">
-								<code class="command-name">x ~ y</code>
-								<div class="command-explanation">
-									<p>selects revs in <code>x</code> but not in <code>y</code></p>
-									<p class="command-hint">Also <code>x | y</code> and <code>x & y</code></p>
-								</div>
+						<div class="command-reference fragment">
+							<code class="command-name">x ~ y</code>
+							<div class="command-explanation">
+								<p>selects revs in <code>x</code> but not in <code>y</code></p>
+								<p class="command-hint">Also <code>x | y</code> and <code>x & y</code></p>
 							</div>
-							<div class="command-desc fragment">
-								<code class="command-name">all()</code>
-								<div class="command-explanation">
-									<p>selects all revisions</p>
-									<p class="command-hint">equivalent to <code>::</code></p>
-								</div>
+						</div>
+						<div class="command-reference fragment">
+							<code class="command-name">all()</code>
+							<div class="command-explanation">
+								<p>selects all revisions</p>
+								<p class="command-hint">equivalent to <code>::</code></p>
 							</div>
-							<div class="command-desc fragment">
-								<code class="command-name">heads(x)</code>
-								<div class="command-explanation">
-									<p>selects the "tips of the branches" in <code>x</code></p>
-									<p class="command-hint">equivalent to <code>x ~ ::x-</code></p>
-								</div>
+						</div>
+						<div class="command-reference fragment">
+							<code class="command-name">heads(x)</code>
+							<div class="command-explanation">
+								<p>selects the "tips of the branches" in <code>x</code></p>
+								<p class="command-hint">equivalent to <code>x ~ ::x-</code></p>
 							</div>
-							<div class="command-desc fragment">
-								<code class="command-name">mine()</code>
-								<div class="command-explanation">
-									<p>selects revisions authored by the current user</p>
-								</div>
+						</div>
+						<div class="command-reference fragment">
+							<code class="command-name">mine()</code>
+							<div class="command-explanation">
+								<p>selects revisions authored by the current user</p>
 							</div>
-							<div class="command-desc fragment">
-								<code class="command-name">fork_point(x)</code>
-								<div class="command-explanation">
-									<p>selects the first shared ancestor between the revisions in <code>x</code></p>
-								</div>
+						</div>
+						<div class="command-reference fragment">
+							<code class="command-name">fork_point(x)</code>
+							<div class="command-explanation">
+								<p>selects the first shared ancestor between the revisions in <code>x</code></p>
 							</div>
 						</div>
 					</section>
@@ -365,7 +349,7 @@
 				<!-- Section 4 -->
 				<section>
 					<section data-background-color="#0663A5">
-						<div class="section-title-container">
+						<div class="section-title">
 							<div class="section-number">4</div>
 							<h1>Creating &<br>navigating<br>revisions</h1>
 						</div>
@@ -373,33 +357,33 @@
 
 					<section>
 						<h2>Creating and navigating</h2>
-						<div class="command-desc fragment">
+						<div class="command-reference fragment">
 							<code class="command-name">jj log</code>
 							<div class="command-explanation">
 								<p>shows revision history</p>
 							</div>
 						</div>
-						<div class="command-desc fragment">
+						<div class="command-reference fragment">
 							<code class="command-name">jj undo</code>
 							<div class="command-explanation">
 								<p>undoes ANY <code>jj</code> command</p>
 								<p class="command-hint">super OP</p>
 							</div>
 						</div>
-						<div class="command-desc fragment">
+						<div class="command-reference fragment">
 							<code class="command-name">jj new</code>
 							<div class="command-explanation">
 								<p>creates a new empty revision on top of <code>@</code></p>
 							</div>
 						</div>
-						<div class="command-desc fragment">
+						<div class="command-reference fragment">
 							<code class="command-name">jj describe</code>
 							<div class="command-explanation">
 								<p>changes the description of <code>@</code></p>
 								<p class="command-hint">Aka <code>jj desc</code></p>
 							</div>
 						</div>
-						<div class="command-desc fragment">
+						<div class="command-reference fragment">
 							<code class="command-name">jj edit [rev]</code>
 							<div class="command-explanation">
 								<p>moves <code>@</code> to <code>rev</code></p>
@@ -415,8 +399,8 @@
 
 					<section data-background-color="#e67e22">
 						<h2>Exercise 1</h2>
-						<div style="display: flex; align-items: center; justify-content: center; gap: 30px;">
-							<img src="images/exercise-book-icon.svg" alt="Exercise" style="height: 80px; border: none; background: none; box-shadow: none;" />
+						<div class="exercise-header">
+							<img src="images/exercise-book-icon.svg" alt="Exercise" class="icon icon--exercise" />
 							<pre><code class="bash" data-trim>
 								jj new exercise-one
 							</code></pre>
@@ -426,8 +410,8 @@
 					<section data-visibility="hidden">
 						<h2>Exercise one</h2>
 						<p>Check out the branch for exercise-one</p>
-						<ol style="font-size: 0.8em;">
-							<li class="fragment">Add descriptions to the commits (target once with relative targetting (<code>@-</code>), and once with absolute targetting <code>jj desc rhw</code>)</li>
+						<ol class="u-font-size-sm">
+							<li class="fragment">Add descriptions to the commits (target once with relative targeting (<code>@-</code>), and once with absolute targeting <code>jj desc rhw</code>)</li>
 							<li class="fragment">Add a new commit on top of the branch</li>
 							<li class="fragment">Make some changes if you like</li>
 							<li class="fragment">Use <code>jj edit</code> to modify one of your previous commits</li>
@@ -435,16 +419,14 @@
 							<li class="fragment">Try to make a change with <code>jj edit</code> that conflicts with a later change</li>
 							<li class="fragment">Use <code>jj undo</code> to undo that change</li>
 						</ol>
-						<div class="fragment" style="margin-top: 8px;">
-							<img src="images/exercise-1-workflow.png" alt="Exercise 1 workflow example" style="max-width: 65%; border-radius: 8px;" />
-						</div>
+						<img src="images/exercise-1-workflow.png" alt="Exercise 1 workflow example" class="diagram diagram--small fragment u-margin-top-sm" />
 					</section>
 				</section>
 
 				<!-- Section 5 -->
 				<section>
 					<section data-background-color="#0663A5">
-						<div class="section-title-container">
+						<div class="section-title">
 							<div class="section-number">5</div>
 							<h1>Manipulating<br>revisions</h1>
 						</div>
@@ -452,25 +434,25 @@
 
 					<section>
 						<h2>Manipulating revisions</h2>
-						<div class="command-desc fragment">
+						<div class="command-reference fragment">
 							<code class="command-name">jj abandon</code>
 							<div class="command-explanation">
 								<p>deletes a rev</p>
 							</div>
 						</div>
-						<div class="command-desc fragment">
+						<div class="command-reference fragment">
 							<code class="command-name">jj squash</code>
 							<div class="command-explanation">
 								<p>combines a rev with its parent</p>
 							</div>
 						</div>
-						<div class="command-desc fragment">
+						<div class="command-reference fragment">
 							<code class="command-name">jj split</code>
 							<div class="command-explanation">
 								<p>splits a rev into two</p>
 							</div>
 						</div>
-						<div class="command-desc fragment">
+						<div class="command-reference fragment">
 							<code class="command-name">jj rebase</code>
 							<div class="command-explanation">
 								<p>moves revs to have different parent(s)</p>
@@ -481,8 +463,8 @@
 
 					<section data-background-color="#e67e22">
 						<h2>Exercise 2</h2>
-						<div style="display: flex; align-items: center; justify-content: center; gap: 30px;">
-							<img src="images/exercise-book-icon.svg" alt="Exercise" style="height: 80px; border: none; background: none; box-shadow: none;" />
+						<div class="exercise-header">
+							<img src="images/exercise-book-icon.svg" alt="Exercise" class="icon icon--exercise" />
 							<pre><code class="bash" data-trim>
 								jj new exercise-two
 							</code></pre>
@@ -492,26 +474,24 @@
 					<section data-visibility="hidden">
 						<h2>Exercise 2</h2>
 						<p>Go to branch for exercise-two.</p>
-						<ol style="font-size: 0.75em;">
+						<ol class="u-font-size-xs">
 							<li class="fragment">Use <code>jj squash</code> to squash all changes into that change</li>
 							<li class="fragment">Use <code>jj split</code> to split the head into four commits (multiply, divide, square-root, and power), in that order</li>
 							<li class="fragment">Use <code>jj rebase</code> to reorder the commits (two branches, one contains divide → multiply → power, the other just the square root commit)
-								<ul style="margin-top: 8px;">
+								<ul class="u-margin-top-sm">
 									<li>You will need to do a small amount of manual <code>jj edit</code> after using <code>jj split</code> to get the README perfect</li>
 									<li>In order to minimise rebase conflicts you will want to keep all changes to the README.md in the parent commits</li>
 								</ul>
 							</li>
 						</ol>
-						<div class="fragment" style="margin-top: 8px;">
-							<img src="images/exercise-2-workflow.png" alt="Exercise 2 workflow example" style="max-width: 60%; border-radius: 8px;" />
-						</div>
+						<img src="images/exercise-2-workflow.png" alt="Exercise 2 workflow example" class="diagram diagram--small fragment u-margin-top-sm" />
 					</section>
 				</section>
 
 				<!-- Section 6 -->
 				<section>
 					<section data-background-color="#0663A5">
-						<div class="section-title-container">
+						<div class="section-title">
 							<div class="section-number">6</div>
 							<h1>Disaster<br>recovery</h1>
 						</div>
@@ -519,57 +499,45 @@
 
 					<section data-auto-animate>
 						<h2>The operation log</h2>
-						<div class="command-desc fragment">
+						<div class="command-reference fragment">
 							<code class="command-name">jj op log</code>
 							<div class="command-explanation">
 								<p>displays the operation history</p>
 							</div>
 						</div>
-						<div class="fragment">
-							<img data-id="op-log" src="images/operation-log-example.png" alt="Operation log output" style="max-width: 90%; border: 2px solid #333; border-radius: 8px;" />
-						</div>
-						
-						<aside class="notes">
-							The operation log shows every operation performed on the repository. Each operation has a unique ID that can be used for restoration or reversion.
-						</aside>
+						<img data-id="op-log" src="images/operation-log-example.png" alt="Operation log output" class="diagram diagram--large diagram--with-border fragment" />
 					</section>
 
 					<section data-auto-animate>
 						<h2>Operation restore</h2>
-						<div class="command-desc fragment">
+						<div class="command-reference fragment">
 							<code class="command-name">jj op restore [op_id]</code>
 							<div class="command-explanation">
 								<p>restores the entire repo to that state</p>
 								<p class="command-hint"><code>[op_id]</code> could be <code>41bbca5e0008</code></p>
 							</div>
 						</div>
-						<div class="command-desc fragment">
+						<div class="command-reference fragment">
 							<code class="command-name">jj undo</code>
 							<div class="command-explanation">
 								<p>restores to the most recent state</p>
 								<p class="command-hint">Also <code>jj redo</code></p>
 							</div>
 						</div>
-						<div class="command-desc fragment">
+						<div class="command-reference fragment">
 							<code class="command-name">jj op revert [op_id]</code>
 							<div class="command-explanation">
 								<p>reverts the operation <code>[op_id]</code></p>
 							</div>
 						</div>
-						<div style="margin-top: 8px;">
-							<img data-id="op-log" src="images/operation-log-example.png" alt="Operation restore example" style="max-width: 60%; border-radius: 8px;" />
-						</div>
-						
-						<aside class="notes">
-							The operation log is incredibly powerful - you can restore to any previous state or revert specific operations. This makes Jujutsu almost impossible to lose work with.
-						</aside>
+						<img data-id="op-log" src="images/operation-log-example.png" alt="Operation restore example" class="diagram diagram--extra-small u-margin-top-sm" style="max-width: 50%;" />
 					</section>
 				</section>
 
 				<!-- Section 7 -->
 				<section>
 					<section data-background-color="#0663A5">
-						<div class="section-title-container">
+						<div class="section-title">
 							<div class="section-number">7</div>
 							<h1>Conflicts</h1>
 						</div>
@@ -577,21 +545,21 @@
 
 					<section data-background-color="#e74c3c" data-auto-animate>
 						<h1 data-id="a-conflict">A conflict!</h1>
-						<img src="images/conflict-handling-diagram.png" alt="Conflict handling diagram" style="max-width: 95%; margin-top: 8px; border-radius: 10px; border: 0; box-shadow: 0 4px 8px rgba(0,0,0,0.3);" />
+						<img src="images/conflict-handling-diagram.png" alt="Conflict handling diagram" class="diagram diagram--extra-large diagram--with-shadow u-margin-top-sm" />
 					</section>
 
 					<section data-background-color="#27ae60" data-auto-animate>
 						<h1 data-id="a-conflict">A conflict!</h1>
 						<h2>Don't panic</h2>
-						<img src="images/conflict-handling-diagram.png" alt="Conflict handling diagram" style="max-width: 95%; margin-top: 8px; border-radius: 10px; border: 0; box-shadow: 0 4px 8px rgba(0,0,0,0.3);" />
+						<img src="images/conflict-handling-diagram.png" alt="Conflict handling diagram" class="diagram diagram--extra-large diagram--with-shadow u-margin-top-sm" />
 					</section>
 
 					<section data-auto-animate>
-						<h1 data-id="a-conflict" style="font-size: 2em">A conflict!</h1>
+						<h1 data-id="a-conflict" class="title-main--small">A conflict!</h1>
 						<p class="fragment">Conflicts do not need to be resolved immediately</p>
 						<p class="fragment">Conflicts are checked in</p>
 						<p class="fragment">You can have as many conflicts as you like at once…</p>
-						<img src="images/conflict-handling-diagram.png" alt="Conflict handling diagram" style="max-width: 60%; margin-top: 8px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);" />
+						<img src="images/conflict-handling-diagram.png" alt="Conflict handling diagram" class="diagram diagram--small diagram--with-shadow u-margin-top-sm" />
 					</section>
 
 					<section data-auto-animate="">
@@ -601,21 +569,21 @@
 							<li class="fragment">
 								<p>
 									Resolve the conflict in your IDE, using the built-in merge resolver
-									<div class="hint">Or use <code>jj resolve</code>, to use Jujutsu's CLI merge resolver<br>But the IDE experience is much nicer…</div>
+									<div class="syntax-hint">Or use <code>jj resolve</code>, to use Jujutsu's CLI merge resolver<br>But the IDE experience is much nicer…</div>
 								</p>
 							</li>
 							<li class="fragment"><code>jj squash</code> into the conflicted commit</li>
 						</ol>
 
-						<div style="margin-top: 8px;">
-							<img src="images/conflict-handling-diagram.png" alt="IDE conflict resolution" style="max-width: 65%; border-radius: 8px;" />
+						<div class="u-margin-top-sm">
+							<img src="images/conflict-handling-diagram.png" alt="IDE conflict resolution" class="diagram diagram--small" />
 						</div>
 					</section>
 
 					<section data-background-color="#e67e22">
 						<h2>Exercise 3</h2>
-						<div style="display: flex; align-items: center; justify-content: center; gap: 30px;">
-							<img src="images/exercise-book-icon.svg" alt="Exercise" style="height: 80px; border: none; background: none; box-shadow: none;" />
+						<div class="exercise-header">
+							<img src="images/exercise-book-icon.svg" alt="Exercise" class="icon icon--exercise" />
 							<pre><code class="bash" data-trim>
 								jj new exercise-three
 							</code></pre>
@@ -629,16 +597,14 @@
 							<li class="fragment">Otherwise, go to exercise-three branch which is pushed to contain a conflict</li>
 							<li class="fragment">Try resolving it with your IDE and see how this works with IDEs that support git</li>
 						</ol>
-						<div class="fragment" style="margin-top: 8px;">
-							<img src="images/exercise-3-workflow.png" alt="Exercise 3 conflict resolution workflow" style="max-width: 60%; border-radius: 8px;" />
-						</div>
+						<img src="images/exercise-3-workflow.png" alt="Exercise 3 conflict resolution workflow" class="diagram diagram--small fragment u-margin-top-sm" />
 					</section>
 				</section>
 
 				<!-- Section 8 -->
 				<section>
 					<section data-background-color="#0663A5">
-						<div class="section-title-container">
+						<div class="section-title">
 							<div class="section-number">8</div>
 							<h1>Remotes</h1>
 						</div>
@@ -650,22 +616,20 @@
 							<p class="fragment">Similar to branches in Git</p>
 							<p class="fragment">But they're just a label which points to a revision</p>
 
-							<div class="command-desc fragment" style="margin-top: 1em !important;">
+							<div class="command-reference fragment u-margin-top-lg">
 								<code class="command-name">jj bookmark set</code>
 								<div class="command-explanation">
 									<p>creates or moves a bookmark</p>
 								</div>
 							</div>
 						</div>
-						<div class="fragment" style="margin-top: 8px;">
-							<img src="images/bookmarks-diagram.png" alt="Bookmarks concept diagram" style="max-width: 90%; border-radius: 8px;" />
-						</div>
+						<img src="images/bookmarks-diagram.png" alt="Bookmarks concept diagram" class="diagram diagram--large u-margin-top-sm fragment" />
 					</section>
 
 					<section>
 						<h2>Tracking bookmarks</h2>
 						<div class="tracking-info">
-							<div class="command-desc fragment">
+							<div class="command-reference fragment">
 								<code class="command-name">jj bookmark track [name]</code>
 								<div class="command-explanation">
 									<p>starts tracking a bookmark</p>
@@ -696,29 +660,27 @@
 
 					<section>
 						<h2>Fetching and pushing</h2>
-						<div class="fetch-push-info">
-							<div class="command-desc fragment">
-								<code class="command-name">jj git fetch</code>
-								<div class="command-explanation">
-									<p>fetches all bookmarks from the remote</p>
-									<p class="command-hint">and essentially <code>git pull</code>s all tracked bookmarks</p>
-								</div>
+						<div class="command-reference fragment">
+							<code class="command-name">jj git fetch</code>
+							<div class="command-explanation">
+								<p>fetches all bookmarks from the remote</p>
+								<p class="command-hint">and essentially <code>git pull</code>s all tracked bookmarks</p>
 							</div>
-							<div class="command-desc fragment">
-								<code class="command-name">jj git push</code>
-								<div class="command-explanation">
-									<p>pushes bookmarks to the remote</p>
-									<p class="command-hint">Behaves similarly to <code>git push --force-with-lease</code></p>
-									<p class="command-hint">Pushes all bookmarks which are ancestors of <code>@</code> (see <a href="https://docs.jj-vcs.dev/latest/cli-reference/#jj-git-push">docs</a>)</p>
-								</div>
+						</div>
+						<div class="command-reference fragment">
+							<code class="command-name">jj git push</code>
+							<div class="command-explanation">
+								<p>pushes bookmarks to the remote</p>
+								<p class="command-hint">Behaves similarly to <code>git push --force-with-lease</code></p>
+								<p class="command-hint">Pushes all bookmarks which are ancestors of <code>@</code> (see <a href="https://docs.jj-vcs.dev/latest/cli-reference/#jj-git-push">docs</a>)</p>
 							</div>
 						</div>
 					</section>
 
 					<section data-background-color="#e67e22">
 						<h2>Exercise 4</h2>
-						<div style="display: flex; align-items: center; justify-content: center; gap: 30px;">
-							<img src="images/exercise-book-icon.svg" alt="Exercise" style="height: 80px; border: none; background: none; box-shadow: none;" />
+						<div class="exercise-header">
+							<img src="images/exercise-book-icon.svg" alt="Exercise" class="icon icon--exercise" />
 							<pre><code class="bash" data-trim>
 								jj new main
 							</code></pre>
@@ -727,7 +689,7 @@
 
 					<section data-visibility="hidden">
 						<h2>Exercise 4</h2>
-						<ol style="font-size: 0.8em;">
+						<ol class="u-font-size-sm">
 							<li class="fragment">Create a new bookmark with the name of your group pointing to the head of one of the branches you have been working on</li>
 							<li class="fragment">Use <code>jj bookmark track</code> on this bookmark to allow pushing to the remote</li>
 							<li class="fragment">Push with <code>jj git push</code></li>
@@ -740,7 +702,7 @@
 				<!-- Section 9 -->
 				<section>
 					<section data-background-color="#0663A5">
-						<div class="section-title-container">
+						<div class="section-title">
 							<div class="section-number">9</div>
 							<h1>Even<br>more?</h1>
 						</div>
@@ -748,31 +710,29 @@
 
 					<section>
 						<h2>Quality of life features</h2>
-						<div class="more-features">
-							<div class="command-desc fragment">
-								<code class="command-name">jj absorb</code>
-								<div class="command-explanation">
-									<p>squashes changes into their relevant ancestor commits</p>
-								</div>
+						<div class="command-reference fragment">
+							<code class="command-name">jj absorb</code>
+							<div class="command-explanation">
+								<p>squashes changes into their relevant ancestor commits</p>
 							</div>
-							<div class="command-desc fragment">
-								<code class="command-name">jj git push --named</code>
-								<div class="command-explanation">
-									<p>creates a bookmark and pushes it</p>
-								</div>
+						</div>
+						<div class="command-reference fragment">
+							<code class="command-name">jj git push --named</code>
+							<div class="command-explanation">
+								<p>creates a bookmark and pushes it</p>
 							</div>
-							<div class="command-desc fragment">
-								<code class="command-name">jj commit</code>
-								<div class="command-explanation">
-									<p>is equivalent to <code>jj desc && jj new</code></p>
-								</div>
+						</div>
+						<div class="command-reference fragment">
+							<code class="command-name">jj commit</code>
+							<div class="command-explanation">
+								<p>is equivalent to <code>jj desc && jj new</code></p>
 							</div>
-							<div class="command-desc fragment">
-								<code class="command-name">jj next --edit</code>
-								<div class="command-explanation">
-									<p>is equivalent to <code>jj edit @+</code></p>
-									<p class="command-hint">Also <code>jj prev</code></p>
-								</div>
+						</div>
+						<div class="command-reference fragment">
+							<code class="command-name">jj next --edit</code>
+							<div class="command-explanation">
+								<p>is equivalent to <code>jj edit @+</code></p>
+								<p class="command-hint">Also <code>jj prev</code></p>
 							</div>
 						</div>
 					</section>
@@ -780,42 +740,39 @@
 					<section>
 						<h2>Even more useful features</h2>
 						<p class="subtitle">Which we sadly don't have time for today</p>
-						<div class="more-features">
-
-							<div class="command-desc fragment">
-								<code class="command-name">jj duplicate</code>
-								<div class="command-explanation">
-									<p>creates a duplicate revision</p>
-								</div>
-							</div>
-							<div class="command-desc fragment">
-								<code class="command-name">jj workspace add</code>
-								<div class="command-explanation">
-									<p>creates a new workspace</p>
-									<p class="command-hint">Essentially another full working copy in its own directory</p>
-								</div>
-							</div>
-							<div class="command-desc fragment">
-								<code class="command-name">jj config edit</code>
-								<div class="command-explanation">
-									<p>edits the Jujutsu config</p>
-									<p class="command-hint">Either <code>--user</code> or <code>--repo</code></p>
-								</div>
-							</div>
-							<div class="command-desc fragment">
-								<code class="command-name">jj evolog</code>
-								<div class="command-explanation">
-									<p>shows how a revision has changed over time</p>
-								</div>
+						<div class="command-reference fragment">
+							<code class="command-name">jj duplicate</code>
+							<div class="command-explanation">
+								<p>creates a duplicate revision</p>
 							</div>
 						</div>
-						<p class="fragment">Let yourself loose on the <a href="https://docs.jj-vcs.dev/latest/cli-reference/l">CLI reference</a></p>
+						<div class="command-reference fragment">
+							<code class="command-name">jj workspace add</code>
+							<div class="command-explanation">
+								<p>creates a new workspace</p>
+								<p class="command-hint">Essentially another full working copy in its own directory</p>
+							</div>
+						</div>
+						<div class="command-reference fragment">
+							<code class="command-name">jj config edit</code>
+							<div class="command-explanation">
+								<p>edits the Jujutsu config</p>
+								<p class="command-hint">Either <code>--user</code> or <code>--repo</code></p>
+							</div>
+						</div>
+						<div class="command-reference fragment">
+							<code class="command-name">jj evolog</code>
+							<div class="command-explanation">
+								<p>shows how a revision has changed over time</p>
+							</div>
+						</div>
+						<p class="fragment">Let yourself loose on the <a href="https://docs.jj-vcs.dev/latest/cli-reference/">CLI reference</a></p>
 					</section>
 
 					<section data-background-color="#e67e22">
 						<h2>Exercise 5</h2>
-						<div style="display: flex; align-items: center; justify-content: center; gap: 30px;">
-							<img src="images/exercise-book-icon.svg" alt="Exercise" style="height: 80px; border: none; background: none; box-shadow: none;" />
+						<div class="exercise-header">
+							<img src="images/exercise-book-icon.svg" alt="Exercise" class="icon icon--exercise" />
 							<pre><code class="bash" data-trim>
 								jj new exercise-five
 							</code></pre>
@@ -825,22 +782,20 @@
 					<section data-visibility="hidden">
 						<h2>Exercise 5</h2>
 						<p>Use <code>jj absorb</code> in the branch for exercise 5 to absorb changes into parent commits</p>
-						<div class="fragment" style="margin-top: 8px;">
-							<img src="images/exercise-5-workflow.png" alt="Exercise 5 absorb workflow" style="max-width: 60%; border-radius: 8px;" />
-						</div>
+						<img src="images/exercise-5-workflow.png" alt="Exercise 5 absorb workflow" class="diagram diagram--small fragment u-margin-top-sm" />
 					</section>
 
 					<section data-background-color="#e67e22">
 						<h2>Bonus exercises</h2>
-						<div style="display: flex; align-items: center; justify-content: center; gap: 30px;">
-							<img src="images/exercise-book-icon.svg" alt="Exercise" style="height: 80px; border: none; background: none; box-shadow: none;" />
+						<div class="exercise-header">
+							<img src="images/exercise-book-icon.svg" alt="Exercise" class="icon icon--exercise" />
 							<p>Look at the end of <code>./workshop-plan.md</code></p>
 						</div>
 					</section>
 
 					<section data-visibility="hidden">
 						<h2>Bonus exercises</h2>
-						<div style="font-size: 0.7em;">
+						<div class="u-font-size-xs">
 							<div class="fragment">
 								<h3>1. Use <code>jj config edit --user</code> to create your preferred set</h3>
 								<ul>
@@ -866,23 +821,23 @@
 					<div class="title-overlay">
 						<div class="title-header">
 							<div class="title-text">
-								<h1 class="title-main" style="font-size: 1.5em !important;">Thank you for your attention!</h1>
+								<h1 class="title-main title-main--small">Thank you for your attention!</h1>
 							</div>
 						</div>
-						<div class="final-contacts">
-							<div class="contact">
+						<div class="contacts-grid">
+							<div class="contact-card">
 								<img class="contact-image" src="images/presenter-photo-1.jpeg" alt="Alistair White-Horne" />
 								<h3 class="contact-name">Alistair White-Horne</h3>
 								<p class="contact-email"><a href="mailto:alistair.whitehorne@tngtech.com">alistair.whitehorne@tngtech.com</a></p>
 							</div>
-							<div class="contact">
+							<div class="contact-card">
 								<img class="contact-image" src="images/presenter-photo-2.jpeg" alt="Martin van IJcken" />
 								<h3 class="contact-name">Martin van IJcken</h3>
 								<p class="contact-email"><a href="mailto:martin.vanijcken@tngtech.com">martin.vanijcken@tngtech.com</a></p>
 							</div>
 						</div>
 						<div class="title-footer">
-							<img src="images/tng-logo.svg" alt="TNG Technology Consulting" class="tng-title-logo" />
+							<img src="images/tng-logo.svg" alt="TNG Technology Consulting" class="logo logo--tng-title" />
 						</div>
 					</div>
 				</section>
