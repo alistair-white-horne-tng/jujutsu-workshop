@@ -462,6 +462,25 @@
 					</section>
 
 					<section>
+						<h2>Fetching and pushing</h2>
+						<div class="command-reference fragment">
+							<code class="command-name">jj git fetch</code>
+							<div class="command-explanation">
+								<p>fetches all bookmarks from the remote</p>
+								<p class="command-hint">and essentially <code>git pull</code>s all bookmarks</p>
+							</div>
+						</div>
+						<div class="command-reference fragment">
+							<code class="command-name">jj git push</code>
+							<div class="command-explanation">
+								<p>pushes bookmarks to the remote</p>
+								<p class="command-hint">Behaves similarly to <code>git push --force-with-lease</code></p>
+								<p class="command-hint">Pushes all bookmarks which are ancestors of <code>@</code> (see <a href="https://docs.jj-vcs.dev/latest/cli-reference/#jj-git-push">docs</a>)</p>
+							</div>
+						</div>
+					</section>
+
+					<section>
 						<h2>Tracking bookmarks</h2>
 						<div class="tracking-info">
 							<div class="command-reference fragment">
@@ -482,25 +501,6 @@
 								<ul>
 									<li>enables this bookmark to be pushed to a remote</li>
 								</ul>
-							</div>
-						</div>
-					</section>
-
-					<section>
-						<h2>Fetching and pushing</h2>
-						<div class="command-reference fragment">
-							<code class="command-name">jj git fetch</code>
-							<div class="command-explanation">
-								<p>fetches all bookmarks from the remote</p>
-								<p class="command-hint">and essentially <code>git pull</code>s all tracked bookmarks</p>
-							</div>
-						</div>
-						<div class="command-reference fragment">
-							<code class="command-name">jj git push</code>
-							<div class="command-explanation">
-								<p>pushes bookmarks to the remote</p>
-								<p class="command-hint">Behaves similarly to <code>git push --force-with-lease</code></p>
-								<p class="command-hint">Pushes all bookmarks which are ancestors of <code>@</code> (see <a href="https://docs.jj-vcs.dev/latest/cli-reference/#jj-git-push">docs</a>)</p>
 							</div>
 						</div>
 					</section>
