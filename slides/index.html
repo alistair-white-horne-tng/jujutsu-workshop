@@ -494,6 +494,7 @@
 								<ul>
 									<li><code>[name]@origin</code> becomes <code>[name]</code></li>
 									<li>you take ownership of it; its revs become mutable</li>
+									<li>not recommended unless the branch's owner knows</li>
 								</ul>
 							</div>
 							<div class="fragment">
@@ -501,6 +502,30 @@
 								<ul>
 									<li>enables this bookmark to be pushed to a remote</li>
 								</ul>
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<h2>Streamlining pushing</h2>
+						<div class="fragment">
+							<p>
+								This is verbose and annoying:
+							</p>
+
+							<ul>
+								<li><code>jj bookmark set [name]</code></li>
+								<li><code>jj bookmark track [name]</code></li>
+								<li><code>jj git push</code></li>
+							</ul>
+						</div>
+
+						<p class="fragment">Instead:</p>
+
+						<div class="command-reference fragment">
+							<code class="command-name">jj git push --named [name]=[rev]</code>
+							<div class="command-explanation">
+								<p>creates, tracks and pushes a bookmark</p>
 							</div>
 						</div>
 					</section>
