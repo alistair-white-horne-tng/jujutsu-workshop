@@ -12,29 +12,25 @@ NB: Most of these can be used with the `-r` flag to operate on a revision other 
 
 # The exercise
 
-1. Make a new commit on top of `main`
+1. Make a new commit on top of `main`. This is likely already the case after you clone the repo.
 2. Edit this file by completing this sentence: My favourite house pets are ______
-3. Consult the log and see what's changed
+3. Consult the log and see that this revision is no longer empty
 4. Give this revision a description
-5. `jj undo` the description (pro tip: see footnote [1])
+5. `jj undo` the description (pro tip: You can undo the undo by using `jj redo`)
 6. Give the revision a more epic description
-7. Create a new revision on top of the current one (pro tip: [2])
+7. Create a new revision on top of the current one (pro tip: You can `jj desc` and `jj new` simultaneously using `jj commit`)
 8. Finish this sentence: My favourite non-pet animals are _____
-9. Describe the rev (pro tip: [3])
+9. Describe the rev (pro tip: [1])
 10. Move the working copy back to the *house pet* revision (not the non-pet one)
-11. Look at this file in your IDE, and see what the diff is showing, as well as what has changed when you moved back
+11. Look at this file in your IDE, and see what the diff is showing, and which of your changes have disappeared
 12. Change your answer to the house pet sentence
 13. Move the working copy forwards to the non-pet animal rev
 14. Observe the log and the resulting file with satisfaction
 
 # If you're finished
 
-- Make/edit a few more commits, but this time try operating on commits which aren't `@`.
-  Also try out referring to revisions differently (eg relatively: `@-` vs absolutely: `uz`)
+- Make/edit a few more commits, but this time try describing a commit which is not `@`.
+- Also try out referring to revisions differently (eg relatively: `@-` vs absolutely: `uz`)
 
-[1] You can undo the undo by using `jj redo`
-
-[2] You can `jj desc` and `jj new` simultaneously using `jj commit`
-
-[3] Some frequently used commands, such as `new` and `desc` don't need the `-r` flag when referring to a commit;
+[1] Some frequently used commands, such as `new` and `desc` don't need the `-r` flag when referring to a commit;
 eg `jj new main` is identical to `jj new -r main`. Also `jj desc -r @` == `jj desc @` == `jj desc`

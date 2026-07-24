@@ -14,7 +14,7 @@
    1. Let your favourite agent loose in the new workspace while you can continue your own development in the original repo
    2. Set a long-running set of unit tests going in a different workspace, on a different revision than you're currently working on
    3. Add `snapshot.auto-update-stale = true` to your config ([what is a stale working copy?](https://docs.jj-vcs.dev/latest/working-copy/#stale-working-copy))
-   4. ([auto-update-stale docs](https://docs.jj-vcs.dev/latest/config/#automatic-update-of-stale-working-copies))
+      ([auto-update-stale docs](https://docs.jj-vcs.dev/latest/config/#automatic-update-of-stale-working-copies))
 3. Start using `jj` on a real live project.
    1. You can just `jj git init --colocate` from any existing Git repo (or `jj git clone --colocate $URL`) and start `jj`-ing!
    2. You can mix-and-match `jj` and Git in the same repo while you get used to it.

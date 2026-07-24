@@ -14,24 +14,24 @@
 5. Describe, and make a new revision on top of this one
 6. My favourite operating system is _____
 7. Squash these two revisions into one (pro tip: [1])
-8. Edit this new combined revision (fun sidequest: try using `jj prev --edit` [2])
-9. Split the revision into two (don't cheat by using `jj undo`...)
-10. In the hunk selector, use `right arrow` to unfold, `Enter` to select, and `c` to confirm (pro tip: [3])
-11. You'll be prompted to write the descriptions for the two new commits in succession
-12. Make a new revision on top of the split revision
-13. My favourite outdoor air temperature is _____
-14. Describe
-15. Rebase the air temp revision onto `main`
-16. Put it back to where it used to be
-17. Re-order the air temp revision to be before the OS revision (hint: you may need to use `-B` or `-A` here)
-18. Make a new revision on top of these three
-19. Change all three of your answers (colour, OS, air temp) in the same revision
-20. `jj absorb`
-21. Explore the magic which just happened
+8. Move your working copy to this new combined revision (fun sidequest: try using `jj prev --edit`, which is identical to `jj edit @-` [2])
+9. Split the revision into two (don't cheat by using `jj undo`...). In the hunk selector, use `right arrow` to unfold,
+   `Enter` to select, and `c` to confirm (pro tip: [3])
+10. You'll be prompted to write the descriptions for the two new commits in succession
+11. Make a new revision on top of the split revision
+12. My favourite outdoor air temperature is _____
+13. Describe
+14. Rebase the air temp revision onto `main`. Use `-h` see discover the syntax for `rebase`
+15. Put it back to where it used to be
+16. Re-order the air temp revision to be before the OS revision (hint: you may need to use `-B` or `-A` here)
+17. Make a new revision on top of these three
+18. Change all three of your answers (colour, OS, air temp) in the same revision
+19. `jj absorb`
+20. Explore the magic which just happened
 
 # If you're finished
 
-- Try rebasing so that a revision has more than one parent; there is no limit here!
+- Try rebasing so that a revision has more than one *parent* (not more than one child). You may need to repeat one of the arguments; there is no limit here!
 - Muck about with creating/re-ordering/squashing/splitting your revisions!
 This is what we meant when we said "imagine you're constantly in the middle of an interactive rebase"
 

@@ -16,7 +16,7 @@
 7. Track this bookmark
 8. Observe the `*` next to this bookmark. This means that the local copy has changes which the remote is missing
 9. Push this bookmark (pro tips: [1] and [2])
-10. Wait until both you and your buddy have both pushed
+10. Wait until you and your buddy have both pushed
 11. Fetch
 12. Make a new commit on top of your buddy's bookmark (hint: you will need to append `@origin` to the end of their bookmark name
     because you are not tracking it yet. If you did the setup steps properly, this should tab-complete)

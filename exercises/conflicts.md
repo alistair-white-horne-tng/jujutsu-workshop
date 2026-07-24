@@ -13,7 +13,7 @@ You already have all the requisite tools in your toolbox. Ain't that cool?
 7. Rebase this rev on top of the previous rev (or vice versa)
 8. ~~**PANIC!** There's a conflict!!! _AAAAHHHH!!!!_~~ There is a conflict, but no need to panic. 
 Remember that this is a perfectly acceptable state. You can come back to this later whenever you like
-9. Make a new rev on top of the conflicted rev
+9. Make a new rev on top of the conflicted rev (pro tip: [1])
 10. Use your IDE's built-in conflict merge tool to resolve the conflict
 11. Squash the resolution into the conflicted rev
 12. Tada! Your version history is now squeaky clean again. I hope you ended up with the correct answer ;)
