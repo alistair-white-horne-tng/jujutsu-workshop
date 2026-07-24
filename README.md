@@ -1,10 +1,10 @@
 # Pre-workshop setup
 
-1. `git clone` this repo
-2. Install `jj`, using [these instructions](https://docs.jj-vcs.dev/latest/install-and-setup/).
+1. Install `jj`, using [these instructions](https://docs.jj-vcs.dev/latest/install-and-setup/).
    - This includes [setting up your name and email address](https://docs.jj-vcs.dev/latest/install-and-setup/#initial-configuration). Use the same creds as you have set up for Git
    - We highly recommend also that you set up [command-line completion](https://docs.jj-vcs.dev/latest/install-and-setup/#command-line-completion)
-3. Initialise `jj` in this repository:
+2. `git clone` this repo
+3. Initialise `jj` in this repository (don't forget to `cd`):
     ```shell
     jj git init --colocate
     ```
