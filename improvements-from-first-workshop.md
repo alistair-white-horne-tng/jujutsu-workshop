@@ -19,6 +19,6 @@
 - [x] Be more explicit about the side-by-side terminal setup
 - [x] Add info about other available tooling
 - [ ] Commands to add
-  - [ ] `arrange`
+  - [x] `arrange`
   - [ ] `fix`/`run`
 - [ ] Remove this file

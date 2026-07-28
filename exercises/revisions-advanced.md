@@ -31,6 +31,7 @@
 
 # If you're finished
 
+- Try reordering the commits using `jj arrange`
 - Try rebasing so that a revision has more than one *parent* (not more than one child). You may need to repeat one of the arguments; there is no limit here!
 - Muck about with creating/re-ordering/squashing/splitting your revisions!
 This is what we meant when we said "imagine you're constantly in the middle of an interactive rebase"
