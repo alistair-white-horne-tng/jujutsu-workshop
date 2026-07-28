@@ -18,7 +18,7 @@
   - Eg you're in the middle of something and need to check out a new branch for an interruption
 - [x] Be more explicit about the side-by-side terminal setup
 - [x] Add info about other available tooling
-- [ ] Commands to add
+- [x] Commands to add
   - [x] `arrange`
-  - [ ] `fix`/`run`
+  - [x] `fix`/`run`
 - [ ] Remove this file

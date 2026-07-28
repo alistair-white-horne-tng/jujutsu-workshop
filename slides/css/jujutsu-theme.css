@@ -402,6 +402,10 @@
   font-family: var(--font-mono);
 }
 
+.command-reference .command-or {
+  margin: 0 calc(-1 * var(--space-lg) + var(--space-sm));
+}
+
 .command-explanation {
   flex: 1;
   max-width: 600px;
