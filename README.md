@@ -7,7 +7,7 @@
 3. Send to Alistair your GitHub username so you can be added as a collaborator to the remote. This will allow you to push during the workshop
 4. Initialise `jj` in this repository (don't forget to `cd`):
     ```shell
-    jj git init --colocate
+    jj git init
     ```
    
 # Slides
